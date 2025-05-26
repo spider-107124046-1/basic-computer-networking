@@ -39,3 +39,37 @@
 
 **Three. `decoy2.txt`, `encoded.txt`, `decoy1.txt`**
 
+**6. One .txt file contains base64-encoded content. Identify and decode it. What does it contain?**
+
+![image](https://github.com/user-attachments/assets/22261c04-a01f-47ae-a15f-0207196cd694)
+
+Contents of `encoded.txt`: `RkxBR3tzcGlkM3JfbmV0d29ya19tYXN0ZXJ9Cg==`
+
+Decodes to: `FLAG{spid3r_network_master}`
+
+**7. Was any attempt made to distract the analyst using decoy files? Explain.**
+
+Yes, using two other text files (`decoy1.txt`, `decoy2.txt`) to attempt to mask the encoded text file (`encoded.txt`) being requested. *It was not effective.*
+
+**8. Are there any known ports being used for uncommon services?**
+
+- **Known ports?** Well-known ports are ports reserved in the range 0-1023 by the Internet Assigned Numbers Authority (IANA) for well-known (common and widely used) network services. Some most notable well-known ports:
+    * SSH - **22**
+    * DNS - **53**
+    * HTTP - **80**
+    * HTTPS (SSL/TLS) - **443**
+
+`tcp.port <= 1024 || udp.port <= 1024` yields only DNS queries and responses, so no well-known ports are being used for uncommon services. However, the HTTP `Server: SimpleHTTP/0.6 Python/3.12.3` is running on port 8000, instead of the well-known port 80.
+
+**9. How many HTTP GET requests are visible in the capture?**
+
+Three.
+
+**10. What User-Agent was used to make the HTTP requests?**
+
+![image](https://github.com/user-attachments/assets/67d9b3d7-bf51-4a38-b4b0-282942b7265b)
+
+`curl/8.5.0`
+
+## Time Pass: Recreating the setup
+
