@@ -1,7 +1,5 @@
 # Computer Networking
 
-***
-
 ## Analysis Questions
 
 **1. What types of traffic are present?**
@@ -71,5 +69,15 @@ Three.
 
 `curl/8.5.0`
 
+***
+
 ## Time Pass: Recreating the setup
 
+Server:
+[![asciicast](https://asciinema.org/a/tUkHw6z3yBlRxOeVYSSJWUKKA.svg)](https://asciinema.org/a/tUkHw6z3yBlRxOeVYSSJWUKKA)
+
+Client:
+[![asciicast](https://asciinema.org/a/36XGUSjU4PhmyTm9p8ISsubsa.svg)](https://asciinema.org/a/36XGUSjU4PhmyTm9p8ISsubsa)
+
+Server Log:
+![image](https://github.com/user-attachments/assets/885d3322-552b-41c0-9227-01d12a413739)
